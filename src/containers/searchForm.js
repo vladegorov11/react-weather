@@ -46,4 +46,5 @@ function mapDispatchToProps(dispatch) {
     fetchWeather: bindActionCreators(fetchWeather, dispatch)
   }
 }
+
 export default connect(null, mapDispatchToProps)(SearchForm)

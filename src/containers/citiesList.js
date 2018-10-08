@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import {CityInfo} from '../components/cityInformation'
 
 class CitiesList extends Component {
-  
+
   renderWeather() {
     return this.props.weather.map((city) => {
       return (<CityInfo city={city} key={city.id} />)
@@ -12,8 +12,12 @@ class CitiesList extends Component {
   }
   render() {
     return(
-      <div>
-        {this.renderWeather()}
+      <div className='container'>
+        <table class="table table-borderless">
+          <tbody>
+            {this.renderWeather()}
+          </tbody>
+        </table >
       </div>
     )
   }
